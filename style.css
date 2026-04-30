@@ -1,0 +1,269 @@
+/* ================================================================
+   Lens & Light — Photography Blog
+   style.css — Guided Version
+
+   Find every ??? and replace it with the correct value.
+   Use your cheat sheet and the mock-up to help you.
+================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------------
+   BODY
+   Makes the whole page stack top to bottom.
+   Nothing to change here.
+
+   For a fun surprise: change flex-direction from column to column-reverse
+---------------------------------------------------------------- */
+
+.body {
+  font-family: Arial, sans-serif;
+  background-color: #f1efe8;
+  display: flex;
+  flex-direction: column;  /* change the value here */
+  min-height: 100vh;
+}
+
+
+/* ----------------------------------------------------------------
+   HEADER
+   Goal: title and tagline should stack on top of each other
+   and sit on the LEFT side of the header.
+
+   There are two values that need to be updated below,
+   can you figure out which ones?
+---------------------------------------------------------------- */
+
+.header {
+  background-color: #1a1a2e;
+  color: white;
+  display: flex;
+  padding: 20px 24px;
+  flex-direction: row;          /* update this value to column */
+  gap: 4px;
+  justify-content: flex-end;    /* update this value to flex-start */
+}
+
+.header-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.header-tagline {
+  color: #9FE1CB;
+  font-size: 13px;
+}
+
+
+/* ----------------------------------------------------------------
+   NAV
+   Goal: links should sit SIDE BY SIDE and have space around each element.
+
+   One of the properties below is using the wrong value —
+   can you figure out which one?
+
+   The other property controls how items are spaced left to right.
+---------------------------------------------------------------- */
+
+.nav {
+  background-color: #0F6E56;
+  display: flex;
+  flex-direction: column;           /* change this to row */
+  /* justify-content: space-around; <- add this line to see the change */
+  padding: 10px 24px;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+
+/* ----------------------------------------------------------------
+   HERO
+   Goal: title and text should sit SIDE BY SIDE.
+
+   Right now the elements are stacking and centred.
+   This will require you to change two values below.
+   Removing some properties might help too.
+---------------------------------------------------------------- */
+
+.hero {
+  background-color: #2c2c3e;
+  padding: 20px 24px;
+  display: flex;
+  gap: 10px;
+  color: white;
+  flex-direction: column;   /* remove this or update it to row */
+  align-items: center;      /* remove this or update it */
+}
+
+.hero-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hero-text {
+  color: #AFA9EC;
+  font-size: 13px;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------------
+   MAIN
+   Goal: sidebar and images should sit SIDE BY SIDE.
+
+   Two properties are missing from this rule:
+
+   1. What property is needed to turn this container into a flex container?
+
+   2. What property changes the direction of elements?
+---------------------------------------------------------------- */
+
+.main {
+  /* 1. add display: flex; here to turn on flexbox */
+  flex-direction: /* 2. add the value here */;
+  gap: 16px;
+  padding: 20px;
+  background-color: #f1efe8;
+}
+
+
+/* ----------------------------------------------------------------
+   SIDEBAR
+   Goal: all the photo info should stack TOP TO BOTTOM.
+
+   You need to use the same property from the last challenge
+   but with a different value to make elements stack.
+---------------------------------------------------------------- */
+
+.sidebar {
+  background-color: white;
+  border-radius: 6px;
+  padding: 16px;
+  width: 180px;
+  flex-shrink: 0;
+  border: 0.5px solid #D3D1C7;
+  display: flex;
+  flex-direction: row;   /* update this value */
+  gap: 10px;
+}
+
+.sidebar-heading {
+  color: #1a1a2e;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 0.5px solid #D3D1C7;
+  padding-bottom: 8px;
+}
+
+.sidebar-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-label {
+  color: #1a1a2e;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.detail-value {
+  color: #5F5E5A;
+  font-size: 11px;
+}
+
+.sidebar-tag {
+  background-color: #EEEDFE;
+  color: #534AB7;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* ----------------------------------------------------------------
+   IMAGES
+   Goal: two photos should stack on TOP OF EACH OTHER.
+
+   What value can you change below to make elements go from
+   left to right into top to bottom?
+---------------------------------------------------------------- */
+
+.images {
+  display: flex;
+  flex: 1;
+  flex-direction: row;   /* change this from row to column */
+  gap: 12px;
+}
+
+
+/* ----------------------------------------------------------------
+   PHOTO
+   Goal: photos should fill the remaining space equally.
+
+   The flex property is already here — just the value is wrong.
+   Change it from 0 to 1 and see what happens.
+---------------------------------------------------------------- */
+
+.photo {
+  background-color: #D3D1C7;
+  border-radius: 6px;
+  padding: 40px 20px;
+  font-size: 13px;
+  color: #5F5E5A;
+  text-align: center;
+  flex: 0;   /* change this from 0 to 1 */
+}
+
+
+/* ----------------------------------------------------------------
+   FOOTER
+   Goal: links should sit side by side on the LEFT side of the footer.
+
+   Look at the mock-up — the content should be on the LEFT
+   but right now it is centred. Change or remove the value below.
+---------------------------------------------------------------- */
+
+.footer {
+  background-color: #1a1a2e;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: center;   /* make the change here */
+  gap: 20px;
+}
+
+.footer-text {
+  color: #9FE1CB;
+  font-size: 12px;
+}
+
+.footer-link {
+  color: #AFA9EC;
+  font-size: 12px;
+}
+
+
+/* ----------------------------------------------------------------
+   BONUS GOAL — responsive font sizes
+
+   Right now all font sizes use px (pixels) which is a fixed unit.
+   Update them to use rem instead — this makes fonts respond
+   to the user's browser settings.
+
+   Example: 16px is roughly equal to 1rem
+   Try: 13px → 0.85rem | 14px → 0.9rem | 18px → 1.125rem
+
+   Refresh the page to see changes.
+---------------------------------------------------------------- */
